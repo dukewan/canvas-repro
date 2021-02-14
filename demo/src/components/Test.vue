@@ -10,7 +10,7 @@
               />
             <CanvasView
               id="canvas"
-              @draw="canvasReady" @touch="onCanvasTouch"
+              @draw="canvasReady"
               left="0" top="0" width="100%" height="100%"
               />
         </GridLayout>
@@ -35,9 +35,6 @@
       canvasTargetReady ({ object, canvas }) {
         this.canvasTarget = canvas
         this.canvasTargetObj = object
-      },
-      onCanvasTouch (args) {
-        this.canvasObj.redraw()
       }
     }
   }
